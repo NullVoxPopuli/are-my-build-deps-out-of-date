@@ -1,15 +1,16 @@
 {
   "name": "are-my-build-deps-out-of-date",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "https://github.com/NullVoxPopuli/are-my-build-deps-out-of-date",
   "description": "Check if your build dependencies are out of date",
-  "bin": "dist/index.js",
+  "bin": "./bin.sh",
   "keywords": [],
   "author": "NullVoxPopuli",
   "files": [
     "src",
-    "dist"
+    "dist",
+    "bin.sh"
   ],
   "license": "MIT",
   "engines": {
