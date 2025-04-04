@@ -29,6 +29,10 @@ const KNOWN_BUILD_DEPS = `
 `.split('\n').map(x => x.trim()).filter(x => !x.startsWith('#')).filter(Boolean);
 
 
+console.log(`
+  Depending on the size of your repo, this may take a moment
+`);
+
 let walker = new Walker();
 
 await walker.scan();
@@ -56,7 +60,7 @@ for (let [packageJsonPath, version] of walker.seenDependencies) {
 }
 
 
-let latestVersions = {};
+let latestVersions: Record<string, string> = {};
 
 for (let [dep] of toCheck) {
   let latest = await latestVersion(dep);
@@ -69,6 +73,9 @@ let hasOld = false;
 
 for (let [dep, version] of toCheck) {
   let latest = latestVersions[dep];
+
+  if (!latest) continue; // hopefully should never happen
+
   let isOld = semver.lt(version, latest);
 
   if (isOld) {
