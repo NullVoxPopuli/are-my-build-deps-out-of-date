@@ -1,7 +1,7 @@
 {
   "name": "are-my-build-deps-out-of-date",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": "https://github.com/NullVoxPopuli/are-my-build-deps-out-of-date",
   "description": "Check if your build dependencies are out of date",
   "bin": "./bin.sh",

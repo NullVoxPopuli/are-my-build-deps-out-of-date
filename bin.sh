@@ -1,5 +1,5 @@
 #!/bin/bash
 
-src="$(dirname "${BASH_SOURCE[0]}")/src"
+OWN_DIRECTORY=$(dirname -- "$(readlink -f "$0")")
 
-NODE_NO_WARNINGS=1 node --experimental-strip-types $src/index.ts
+NODE_NO_WARNINGS=1 node --experimental-strip-types $OWN_DIRECTORY/src/index.ts
