@@ -1,0 +1,10 @@
+{
+  "extends": ["@tsconfig/strictest", "@tsconfig/node-lts"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "noEmitOnError": false,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "types": ["@types/node"]
+  }
+}

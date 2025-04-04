@@ -1,0 +1,36 @@
+{
+  "name": "are-my-build-deps-out-of-date",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "",
+  "bin": "dist/index.js",
+  "keywords": [],
+  "author": "NullVoxPopuli",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 22"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types ./src/index.ts",
+    "build": "tsc",
+    "prepack": "tsc"
+  },
+  "dependencies": {
+    "@manypkg/find-root": "^2.2.3",
+    "latest-version": "^9.0.0",
+    "resolve-package-path": "^4.0.3",
+    "semver": "^7.7.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts": "^22.0.1",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^22.14.0",
+    "@types/semver": "^7.7.0",
+    "prettier": "^3.5.3",
+    "typescript": "~5.7.2"
+  }
+}
